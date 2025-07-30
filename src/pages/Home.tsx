@@ -99,7 +99,7 @@ export const Home = () => {
               <div className="relative aspect-video rounded-lg overflow-hidden group max-w-3xl mx-auto">
                 <iframe
                   className="w-full h-full transition-transform duration-300 group-hover:scale-105"
-                  src="https://www.youtube.com/embed/Mdb5xMMgRCs"
+                  src="https://www.youtube.com/embed/yJfZfweLxdk"
                   title="Demo Reel - David Ogunniyi"
                   frameBorder="0"
                   allowFullScreen

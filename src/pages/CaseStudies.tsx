@@ -15,10 +15,10 @@ export const CaseStudies = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              Voices of Hope
+              House of Mara
             </motion.h2>
             <p className="text-slate-300 text-lg">
-              Helping a Nonprofit Connect With Youth
+              Lending a voice to the voiceless
             </p>
           </div>
           
@@ -105,8 +105,8 @@ export const CaseStudies = () => {
                   className="text-center p-6 bg-slate-800/30 rounded-xl"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="text-3xl font-bold text-amber-400 mb-2">3</div>
-                  <p className="text-slate-300">Continents reached (Africa, Australia, Canada)</p>
+                  <div className="text-3xl font-bold text-amber-400 mb-2">4</div>
+                  <p className="text-slate-300">Continents reached (Africa, Australia, America, Europe)</p>
                 </motion.div>
               </div>
             </div>

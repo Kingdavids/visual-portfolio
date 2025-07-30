@@ -9,73 +9,73 @@ export const Videography = () => {
     corporate: [
       {
         id: 1,
-        title: "Corporate Brand Story",
-        embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        description: "A compelling brand narrative that transforms business objectives into emotional connections.",
-        client: "TechStart Inc.",
-        year: "2023"
+        title: "Tech Startup Story",
+        embedUrl: "https://www.youtube.com/embed/yJfZfweLxdk",
+        description: "A compelling brand narrative that highlight their mission, key features and real-world imapct.",
+        client: "Cloud Ethusiast Canada.",
+        year: "2024"
       },
       {
         id: 7,
-        title: "Corporate Training Series",
-        embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        description: "Educational content that makes complex information accessible and engaging.",
-        client: "Global Corp",
-        year: "2022"
+        title: "Peace is Possible",
+        embedUrl: "https://youtube.com/embed/4cgolgEKat8?si=kgzKncx_qI24fqF6",
+        description: "A documentary on Dadin Kowa, a neighborhood that has managed to stay secure in spite of Jos' religiously motivated crises.",
+        client: "Search for Common Ground and funded by German Government",
+        year: "2020",
       }
     ],
     commercial: [
       {
         id: 3,
-        title: "Product Launch Campaign",
-        embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        description: "High-energy commercial content that drives engagement and conversion.",
-        client: "InnovateTech",
-        year: "2023"
+        title: "School Admission Video",
+        embedUrl: "https://rumble.com/embed/v199kr1/?pub=4",
+        description: "Subtle and comly commercial content that drives engagement and enrollment.",
+        client: "Christian Faith Institute",
+        year: "2022"
       },
       {
         id: 5,
-        title: "Fashion Brand Campaign",
-        embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        title: "Comedy Club Advert",
+        embedUrl: "https://www.youtube.com/embed/1uiIftO9Bug",
         description: "Stylized commercial work that elevates brand identity through visual poetry.",
-        client: "Luxe Fashion",
-        year: "2023"
+        client: "Jos Unwind Comedy Club",
+        year: "2021"
       }
     ],
     storytelling: [
       {
         id: 2,
         title: "Wedding Cinematic Reel",
-        embedUrl: "https://www.youtube.com/embed/Mdb5xMMgRCs",
+        embedUrl: "https://www.youtube.com/embed/rL0hseVUsHE",
         description: "An intimate celebration of love captured through cinematic storytelling techniques.",
-        client: "Sarah & Michael",
-        year: "2023"
+        client: "Faith & Bata",
+        year: "2022"
       },
       {
         id: 4,
-        title: "Nonprofit Impact Story",
-        embedUrl: "https://www.youtube.com/embed/Mdb5xMMgRCs",
-        description: "Documenting real change and human impact through authentic storytelling.",
-        client: "Hope Foundation",
-        year: "2022"
+        title: "Our Corporate Affair",
+        embedUrl: "https://www.youtube.com/embed/EkVgh6wUfj8",
+        description: "Sensitizing the general public to exercise their civic rights through authentic storytelling.",
+        client: "Lord's Nta10ment",
+        year: "2019"
       },
       {
         id: 6,
         title: "Music Video Production",
-        embedUrl: "https://www.youtube.com/embed/Mdb5xMMgRCs",
+        embedUrl: "https://www.youtube.com/embed/UDdYxzeZFkg",
         description: "Creative music video that blends narrative storytelling with artistic expression.",
-        client: "Rising Artist",
+        client: "D'Cross",
         year: "2022"
       }
     ],
     events: [
       {
         id: 8,
-        title: "Event Highlight Reel",
-        embedUrl: "https://www.youtube.com/embed/Mdb5xMMgRCs",
+        title: "Pitch Perfect Naija Season 1",
+        embedUrl: "https://www.youtube.com/embed/bAm9nyTg12w",
         description: "Capturing the energy and emotion of live events with cinematic flair.",
-        client: "Annual Conference",
-        year: "2023"
+        client: "Pitch Perfect",
+        year: "2021"
       }
     ]
   };

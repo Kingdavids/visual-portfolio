@@ -68,7 +68,7 @@ export const Contact = () => {
                 title: 'WhatsApp',
                 detail: 'Quick Chat',
                 description: 'Fast response for urgent projects',
-                action: '#'
+                action: 'https://wa.me/14375526807?text=Hello%20I%20am%20interested%20in%20your%20services\',\n'
               }
             ].map((method, index) => (
               <motion.div

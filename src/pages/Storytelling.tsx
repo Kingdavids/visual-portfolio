@@ -42,23 +42,23 @@ export const Storytelling = () => {
   const featuredStories = [
     {
       title: "The Entrepreneur's Journey",
-      mediaUrl: "https://www.youtube.com/embed/Mdb5xMMgRCs",
+      mediaUrl: "https://www.youtube.com/embed/yJfZfweLxdk&feature=youtu.be",
       description: "A documentary-style piece following a startup founder's path from ideation to success, capturing both struggles and triumphs.",
-      impact: "Increased investor interest by 300%",
+      impact: "Increased investor interest by 200%",
       category: "Corporate Documentary"
     },
     {
       title: "Love in Motion",
-      mediaUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      mediaUrl: "https://www.youtube.com/embed/GwBdM_plxY4",
       description: "A wedding film that transcends traditional coverage, weaving together family histories and personal narratives into a timeless love story.",
       impact: "Featured in wedding publications",
       category: "Personal Narrative"
     },
     {
-      title: "Voices of Change",
-      mediaUrl: "https://www.youtube.com/embed/Mdb5xMMgRCs",
-      description: "A nonprofit campaign highlighting community impact through personal testimonials and powerful visual metaphors.",
-      impact: "Raised $2M in donations",
+      title: "House of Mara",
+      mediaUrl: "https://rumble.com/embed/v1cnd8d/?pub=4",
+      description: "A nonprofit campaign highlighting the abusing of young girls in Africa, Powered by Voice of Martyrs Canada and 100 Huntley Canada.",
+      impact: "Raised $1M in donations",
       category: "Social Impact"
     }
   ];
