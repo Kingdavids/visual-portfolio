@@ -107,6 +107,27 @@ export const Storytelling = () => {
       )
     },
     {
+      id: 'projects',
+      title: 'Story Projects',
+      subtitle: 'Transformative narratives that inspire and connect',
+      icon: '🎬',
+      content: (
+        <div className="book-content">
+          <div className="space-y-8">
+            {storyProjects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                mediaUrl={project.mediaUrl}
+                category={project.category}
+              />
+            ))}
+          </div>
+        </div>
+      )
+    },
+    {
       id: 'featured',
       title: 'Featured Story Projects',
       subtitle: 'Stories that transformed brands and touched hearts',
@@ -126,6 +147,7 @@ export const Storytelling = () => {
                     title={story.title}
                     description={story.description}
                     mediaUrl={story.mediaUrl}
+                    category={story.category}
                   />
                 </div>
                 
