@@ -67,7 +67,7 @@ export const Home = () => {
           {/* Title */}
           <motion.div variants={itemVariants} className="mb-8">
             <motion.h1 
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-black leading-tight md:mt-80"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-black leading-tight lg:mt-80"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
