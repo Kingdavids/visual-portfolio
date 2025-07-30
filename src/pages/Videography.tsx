@@ -11,6 +11,7 @@ export const Videography = () => {
         id: 1,
         title: "Tech Startup Story",
         embedUrl: "https://www.youtube.com/embed/yJfZfweLxdk",
+        watchUrl: "https://www.youtube.com/watch?v=yJfZfweLxdk",
         description: "A compelling brand narrative that highlight their mission, key features and real-world imapct.",
         client: "Cloud Ethusiast Canada.",
         year: "2024"
@@ -19,6 +20,7 @@ export const Videography = () => {
         id: 7,
         title: "Peace is Possible",
         embedUrl: "https://youtube.com/embed/4cgolgEKat8?si=kgzKncx_qI24fqF6",
+        watchUrl: "https://www.youtube.com/watch?v=4cgolgEKat8",
         description: "A documentary on Dadin Kowa, a neighborhood that has managed to stay secure in spite of Jos' religiously motivated crises.",
         client: "Search for Common Ground and funded by German Government",
         year: "2020",
@@ -29,6 +31,7 @@ export const Videography = () => {
         id: 3,
         title: "School Admission Video",
         embedUrl: "https://rumble.com/embed/v199kr1/?pub=4",
+        watchUrl: "https://rumble.com/v199kr1-christian-faith-institute-admission-video.html",
         description: "Subtle and comly commercial content that drives engagement and enrollment.",
         client: "Christian Faith Institute",
         year: "2022"
@@ -37,6 +40,7 @@ export const Videography = () => {
         id: 5,
         title: "Comedy Club Advert",
         embedUrl: "https://www.youtube.com/embed/1uiIftO9Bug",
+        watchUrl: "https://www.youtube.com/watch?v=1uiIftO9Bug",
         description: "Stylized commercial work that elevates brand identity through visual poetry.",
         client: "Jos Unwind Comedy Club",
         year: "2021"
@@ -47,6 +51,7 @@ export const Videography = () => {
         id: 2,
         title: "Wedding Cinematic Reel",
         embedUrl: "https://www.youtube.com/embed/rL0hseVUsHE",
+        watchUrl: "https://www.youtube.com/watch?v=rL0hseVUsHE",
         description: "An intimate celebration of love captured through cinematic storytelling techniques.",
         client: "Faith & Bata",
         year: "2022"
@@ -55,6 +60,7 @@ export const Videography = () => {
         id: 4,
         title: "Our Corporate Affair",
         embedUrl: "https://www.youtube.com/embed/EkVgh6wUfj8",
+        watchUrl: "https://www.youtube.com/watch?v=EkVgh6wUfj8",
         description: "Sensitizing the general public to exercise their civic rights through authentic storytelling.",
         client: "Lord's Nta10ment",
         year: "2019"
@@ -63,6 +69,7 @@ export const Videography = () => {
         id: 6,
         title: "Music Video Production",
         embedUrl: "https://www.youtube.com/embed/UDdYxzeZFkg",
+        watchUrl: "https://www.youtube.com/watch?v=UDdYxzeZFkg",
         description: "Creative music video that blends narrative storytelling with artistic expression.",
         client: "D'Cross",
         year: "2022"
@@ -73,6 +80,7 @@ export const Videography = () => {
         id: 8,
         title: "Pitch Perfect Naija Season 1",
         embedUrl: "https://www.youtube.com/embed/bAm9nyTg12w",
+        watchUrl: "https://www.youtube.com/watch?v=bAm9nyTg12w",
         description: "Capturing the energy and emotion of live events with cinematic flair.",
         client: "Pitch Perfect",
         year: "2021"
@@ -110,11 +118,12 @@ export const Videography = () => {
           
           <div className="aspect-video mb-6">
             <iframe
-              src={video.embedUrl}
+              src={video.embedUrl + "?rel=0&modestbranding=1"}
               title={video.title}
               className="w-full h-full rounded-lg"
               frameBorder="0"
               allowFullScreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             />
           </div>
           
@@ -124,7 +133,7 @@ export const Videography = () => {
               <p className="text-gray-300 mb-4">{video.description}</p>
             </div>
             <div>
-              <div className="space-y-2">
+              <div className="space-y-2 mb-4">
                 <div>
                   <span className="text-gray-400">Client: </span>
                   <span className="text-white">{video.client}</span>
@@ -152,11 +161,15 @@ export const Videography = () => {
             onClick={() => setSelectedVideo(video)}
           >
             <div className="aspect-video relative overflow-hidden bg-gradient-to-br from-amber-900/20 to-amber-600/10">
-              <div className="absolute inset-0 bg-gradient-to-br from-black/60 to-black/30 group-hover:from-black/40 group-hover:to-black/10 transition-all duration-300 flex items-center justify-center">
-                <div className="w-16 h-16 bg-amber-400/90 rounded-full flex items-center justify-center text-black text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
-                  ▶
-                </div>
-              </div>
+              <iframe
+                src={video.embedUrl + "?rel=0&modestbranding=1"}
+                title={video.title}
+                frameBorder="0"
+                allowFullScreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                className="w-full h-full"
+                onClick={(e) => e.stopPropagation()}
+              />
               <div className="absolute top-4 left-4">
                 <span className="bg-amber-400/90 text-black text-xs font-bold px-3 py-1 rounded-full">
                   {video.year}
@@ -169,8 +182,20 @@ export const Videography = () => {
                 {video.title}
               </h3>
               <p className="text-amber-200/80 text-sm mb-3 line-clamp-2">{video.description}</p>
-              <div className="text-xs text-amber-200/60">
+              <div className="text-xs text-amber-200/60 mb-4">
                 <span className="font-semibold">{video.client}</span>
+              </div>
+              <div className="flex gap-2">
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setSelectedVideo(video);
+                  }}
+                  className="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-semibold py-2 px-4 rounded-lg transition-colors text-center text-sm"
+                >
+                  View Details
+                </button>
               </div>
             </div>
           </motion.div>

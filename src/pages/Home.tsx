@@ -99,12 +99,12 @@ export const Home = () => {
               <div className="relative aspect-video rounded-lg overflow-hidden group max-w-3xl mx-auto">
                 <iframe
                   className="w-full h-full transition-transform duration-300 group-hover:scale-105"
-                  src="https://www.youtube.com/embed/yJfZfweLxdk"
+                  src="https://www.youtube.com/embed/yJfZfweLxdk?rel=0&modestbranding=1"
                   title="Demo Reel - David Ogunniyi"
                   frameBorder="0"
                   allowFullScreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 />
-                <div className="cinematic-overlay absolute inset-0 group-hover:opacity-100" />
               </div>
             </div>
           </motion.div>

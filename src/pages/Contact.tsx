@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BookPageLayout } from '../components/BookPageLayout';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ export const Contact = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -20,12 +22,46 @@ export const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+    setSubmitStatus('idle');
+
+    try {
+      // EmailJS configuration
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration is missing. Please check your environment variables.');
+      }
+
+      const templateParams = {
+        name: formData.name,
+        from_email: formData.email,
+        project_type: formData.project,
+        budget_range: formData.budget,
+        message: formData.message,
+        to_email: 'rashydavids@gmail.com'
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        project: '',
+        message: '',
+        budget: ''
+      });
+    } catch (error) {
+      console.error('Email send failed:', error);
+      setSubmitStatus('error');
+    } finally {
       setIsSubmitting(false);
-    }, 2000);
+    }
   };
 
   const contactSections = [
@@ -191,6 +227,12 @@ export const Contact = () => {
             >
               {isSubmitting ? 'Sending Your Story...' : 'Start Our Creative Journey'}
             </motion.button>
+            {submitStatus === 'success' && (
+              <p className="text-green-500 text-center mt-4">Your message has been sent successfully!</p>
+            )}
+            {submitStatus === 'error' && (
+              <p className="text-red-500 text-center mt-4">Failed to send your message. Please try again.</p>
+            )}
           </form>
         </div>
       )
