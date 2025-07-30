@@ -49,12 +49,12 @@ export const Videography = () => {
     storytelling: [
       {
         id: 2,
-        title: "Wedding Cinematic Reel",
-        embedUrl: "https://www.youtube.com/embed/rL0hseVUsHE",
-        watchUrl: "https://www.youtube.com/watch?v=rL0hseVUsHE",
-        description: "An intimate celebration of love captured through cinematic storytelling techniques.",
-        client: "Faith & Bata",
-        year: "2022"
+        title: "Music Performance",
+        embedUrl: "https://www.youtube.com/embed/FE7hGkt9n2I",
+        watchUrl: "https://www.youtube.com/watch?v=FE7hGkt9n2I",
+        description: "Young talented Esther performs Fur Elise",
+        client: "Twinz Melody",
+        year: "2025"
       },
       {
         id: 4,
@@ -72,6 +72,15 @@ export const Videography = () => {
         watchUrl: "https://www.youtube.com/watch?v=UDdYxzeZFkg",
         description: "Creative music video that blends narrative storytelling with artistic expression.",
         client: "D'Cross",
+        year: "2022"
+      },
+      {
+        id: 6,
+        title: "Wedding Cinematic Reel",
+        embedUrl: "https://www.youtube.com/embed/rL0hseVUsHE",
+        watchUrl: "https://www.youtube.com/watch?v=rL0hseVUsHE",
+        description: "An intimate celebration of love captured through cinematic storytelling techniques.",
+        client: "Faith & Bata",
         year: "2022"
       }
     ],

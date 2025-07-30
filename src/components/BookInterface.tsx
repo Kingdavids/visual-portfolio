@@ -91,7 +91,7 @@ export const BookInterface: React.FC<BookInterfaceProps> = ({ children }) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
           >
-            DAVID OGUNNIYI
+            MUYIWA DAVIDS
           </motion.div>
         </div>
         

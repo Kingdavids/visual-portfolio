@@ -8,26 +8,24 @@ export const About = () => {
     { category: "Professional", items: ["Project Management", "Client Relations", "Creative Direction", "Team Leadership", "Brand Strategy"] }
   ];
 
-  const experiences = [
+  const experiences: Experience[] = [
     {
       role: "Senior Videographer",
-      company: "Creative Media Studio",
-      period: "2021 - Present",
-      description: "Leading video production projects from concept to completion, managing client relationships, and mentoring junior creators."
-    },
-    {
-      role: "Freelance Video Creator",
-      company: "Independent",
-      period: "2019 - 2021",
-      description: "Developed diverse portfolio working with startups, nonprofits, and established brands to create compelling visual narratives."
-    },
-    {
-      role: "Video Production Assistant",
-      company: "Digital Dreams Agency",
-      period: "2018 - 2019",
-      description: "Supported large-scale productions, learned industry standards, and developed technical expertise in post-production workflows."
+      company: "Lord's Nta10ment",
+      period: "2008 – Present",
+      description: [
+        "Lead full-cycle video production — from concept development to final edit.",
+        "Directed branded content, documentaries, and commercials for diverse clients.",
+        "Collaborated with clients to shape visual storytelling that aligns with their goals.",
+        "Managed on-set crews and coordinated production logistics.",
+        "Oversaw editing, color grading, sound design, and final delivery.",
+        "Produced campaigns that increased client engagement and brand visibility.",
+        "Mentored junior videographers and editors, promoting creative growth within the team."
+      ]
     }
   ];
+
+
 
   const aboutSections = [
     {
@@ -87,34 +85,40 @@ export const About = () => {
         </div>
       )
     },
+
     {
       id: 'experience',
       title: 'Professional Journey',
       icon: '📈',
       content: (
-        <div className="book-content">
-          <div className="space-y-8">
-            {experiences.map((exp, index) => (
-              <div
-                key={index}
-                className="glass-book rounded-xl p-8 border-l-4 border-amber-400"
-              >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
-                    <p className="text-amber-400 text-lg">{exp.company}</p>
+          <div className="book-content">
+            <div className="space-y-8">
+              {experiences.map((exp, index) => (
+                  <div
+                      key={index}
+                      className="glass-book rounded-xl p-8 border-l-4 border-amber-400"
+                  >
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
+                        <p className="text-amber-400 text-lg">{exp.company}</p>
+                      </div>
+                      <span className="text-amber-200 font-semibold">{exp.period}</span>
+                    </div>
+
+                    <ul className="text-white/80 leading-relaxed list-disc list-inside space-y-1">
+                      {exp.description.map((point, i) => (
+                          <li key={i}>{point}</li>
+                      ))}
+                    </ul>
                   </div>
-                  <span className="text-amber-200 font-semibold">{exp.period}</span>
-                </div>
-                <p className="text-white/80 leading-relaxed">{exp.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
       )
     },
     {
-      id: 'philosophy',
+    id: 'philosophy',
       title: 'Creative Philosophy',
       icon: '🎭',
       content: (

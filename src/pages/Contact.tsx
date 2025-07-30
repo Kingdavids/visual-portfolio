@@ -97,14 +97,18 @@ export const Contact = () => {
                 title: 'Instagram',
                 detail: '@lordsnta10ment',
                 description: 'See behind-the-scenes content',
-                action: 'https://instagram.com/lordsnta10ment'
+                action: 'https://instagram.com/lords_nta10ment',
+                target: '_blank',
+                rel: 'noopener noreferrer'
               },
               {
                 icon: '💬',
                 title: 'WhatsApp',
                 detail: 'Quick Chat',
                 description: 'Fast response for urgent projects',
-                action: 'https://wa.me/14375526807?text=Hello%20I%20am%20interested%20in%20your%20services\',\n'
+                action: 'https://wa.me/14375526807?text=Hello%20I%20am%20interested%20in%20your%20services',
+                target: '_blank',
+                rel: 'noopener noreferrer'
               }
             ].map((method, index) => (
               <motion.div
@@ -115,7 +119,7 @@ export const Contact = () => {
                 whileHover={{ y: -5 }}
                 className="glass rounded-xl p-6 text-center group cursor-pointer"
               >
-                <a href={method.action} target={method.title === 'Instagram' ? '_blank' : '_self'}>
+                <a href={method.action} target={method.target} rel={method.rel}>
                   <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
                     {method.icon}
                   </div>

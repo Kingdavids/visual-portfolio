@@ -72,7 +72,7 @@ export const Home = () => {
               animate={{ scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <span className="gradient-text">David Ogunniyi</span>
+              <span className="gradient-text">Muyiwa Davids</span>
             </motion.h1>
             <motion.div 
               className="typewriter text-sm sm:text-base md:text-lg lg:text-xl text-amber-200 mt-3 sm:mt-4"
@@ -100,7 +100,7 @@ export const Home = () => {
                 <iframe
                   className="w-full h-full transition-transform duration-300 group-hover:scale-105"
                   src="https://www.youtube.com/embed/yJfZfweLxdk?rel=0&modestbranding=1"
-                  title="Demo Reel - David Ogunniyi"
+                  title="Demo Reel - Muyiwa Davids"
                   frameBorder="0"
                   allowFullScreen
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

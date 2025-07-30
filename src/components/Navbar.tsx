@@ -25,7 +25,7 @@ export const Navbar = () => {
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold gradient-text hover:scale-105 transition-transform">
-          David Ogunniyi
+          Muyiwa Davids
         </Link>
 
         {/* Desktop Navigation */}
